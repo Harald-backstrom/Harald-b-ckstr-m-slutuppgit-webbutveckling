@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mitron Marinteknik</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header> 
+        <nav>
+            <div class="logo">Mitron Marinteknik</div>
+            <ul>
+                <li><a href="index-sv.html">Produkter</a></li>
+                <li><a href="about-sv.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <button onclick="toggleLanguage()">Byt Språk</button>
+    <main>
+        <section class="product-list">
+            <!-- produkt 1-->
+            <div class="product">
+                <a href="product1.html">
+                    <img src="product1.jpg" alt="Produkt 1">
+                    <h2>Produkt 1</h2>
+                    <p>Kortfattad beskrivning av produkt 1.</p>
+                </a>
+            </div>
+
+            <!-- Produkt 2 -->
+            <div class="product">
+                <a href="product2.html">
+                    <img src="product2.jpg" alt="Produkt 2">
+                    <h2>Produkt 2</h2>
+                    <p>Kortfattad beskrivning av produkt 2.</p>
+                </a>
+            </div>
+            <!-- produkt 3-->
+            <div class="product">
+                <a href="product3.html">
+                    <img src="product3.jpg" alt="Produkt 1">
+                    <h2>Produkt 3</h2>
+                    <p>Kortfattad beskrivning av produkt 3.</p>
+                </a>
+            </div>
+
+            <!-- Produkt 4 -->
+            <div class="product">
+                <a href="product4.html">
+                    <img src="product4.jpg" alt="Produkt 4">
+                    <h2>Produkt 4</h2>
+                    <p>Kortfattad beskrivning av produkt 4.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <script>
+        function toggleLanguage() {
+            var currentUrl = window.location.href;
+
+            if (currentUrl.includes("-en.html")) {
+                window.location.href = currentUrl.replace("-en.html", "-sv.html");
+            } else if (currentUrl.includes("-sv.html")) {
+                window.location.href = currentUrl.replace("-sv.html", "-en.html");
+            }
+        }
+    </script>
+</body>
+</html>
