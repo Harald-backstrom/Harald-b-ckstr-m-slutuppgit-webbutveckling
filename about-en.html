@@ -1,83 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - Mitron Marinteknik</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logo">Mitron Marinteknik</div>
-            <ul>
-                <li><a href="index-en.html">Products</a></li>
-                <li><a href="about-en.html">Contact</a></li>
-            </ul>
-        </nav>
+      <nav class="normal-menu">
+        <div class="logo">Mitron Marinteknik</div>
+        <ul>
+          <li><a href="index-en.html">Products</a></li>
+          <li><a href="about-en.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="hamburger-menu">
+        <div class="logo">Mitron Marinteknik</div>
+        <div id="menu-toggle" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul id="menu-links" class="menu-links">
+          <li><a href="index-en.html">Products</a></li>
+          <li><a href="about-en.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <button onclick="toggleLanguage()">Change Language</button>
     <main>
-        <article class="container">
-            <h2>About Us</h2>
-            <p>Mitron Marinteknik AB is located at Båtman Stens väg, 163 41 Spånga, Sweden. We are proud manufacturers of unique marine products.</p>
-            
-            <p>Contact us at:</p>
-            <address>
-                Tel: +46 8 257880<br>
-                Fax: +46 8 808300<br>
-                Email: <a href="mailto:info@mitron.se">info@mitron.se</a><br>
-                Web: <a href="http://www.mitron.se">www.mitron.se</a>
-            </address>
+      <article class="container">
+        <h2>About Us</h2>
+        <p>
+          Mitron Marinteknik AB is located at Båtman Stens väg, 163 41 Spånga,
+          Sweden. We are proud manufacturers of unique marine products.
+        </p>
 
-            <p>Our banking information:</p>
-            <ul>
-                <li>Beneficiary: Mitron Marinteknik AB, Båtman Stens Väg 81, SE 163 41 Spånga, Sweden</li>
-                <li>Banking: SWEDBANK, Box 15, SE38402 Ålem</li>
-                <li>BIC/SWIFT: SWEDSESS, Bank sort code: 8434-3</li>
-                <li>Bank account No. (SEK): 34527309 (Payment in SEK)</li>
-                <li>Bank account No. (EUR): 2376719783 (Payment in EUR)</li>
-                <li>IBAN (SEK): SE8880000843430034527309</li>
-                <li>IBAN (EUR): SE4480000843432376719783</li>
-                <li>VAT No.: SE556863-686301</li>
-            </ul>
+        <p>Contact us at:</p>
+        <address>
+          Tel: +46 8 257880<br />
+          Fax: +46 8 808300<br />
+          Email: <a href="mailto:info@mitron.se">info@mitron.se</a><br />
+          Web: <a href="http://www.mitron.se">www.mitron.se</a>
+        </address>
 
-            <p>Board of Directors: Stockholm</p>
+        <p>Our banking information:</p>
+        <ul>
+          <li>
+            Beneficiary: Mitron Marinteknik AB, Båtman Stens Väg 81, SE 163 41
+            Spånga, Sweden
+          </li>
+          <li>Banking: SWEDBANK, Box 15, SE38402 Ålem</li>
+          <li>BIC/SWIFT: SWEDSESS, Bank sort code: 8434-3</li>
+          <li>Bank account No. (SEK): 34527309 (Payment in SEK)</li>
+          <li>Bank account No. (EUR): 2376719783 (Payment in EUR)</li>
+          <li>IBAN (SEK): SE8880000843430034527309</li>
+          <li>IBAN (EUR): SE4480000843432376719783</li>
+          <li>VAT No.: SE556863-686301</li>
+        </ul>
 
-            <p>Contact: Conny Bäckström - Email: <a href="mailto:cb@mitron.se">cb@mitron.se</a></p>
-        </article>
-        <div id="map-container">
-            <div id='map'></div>
-        </div>
+        <p>Board of Directors: Stockholm</p>
+
+        <p>
+          Contact: Conny Bäckström - Email:
+          <a href="mailto:cb@mitron.se">cb@mitron.se</a>
+        </p>
+      </article>
+      <div id="map-container">
+        <div id="map"></div>
+      </div>
     </main>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
     <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoiaGFycmViYXJyZSIsImEiOiJjbHR6d29pOG4wNTRvMmlzM2IwdXd4bnJkIn0.-oZ0a4L3ZQtzFXpoPjmqbA';
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiaGFycmViYXJyZSIsImEiOiJjbHR6d29pOG4wNTRvMmlzM2IwdXd4bnJkIn0.-oZ0a4L3ZQtzFXpoPjmqbA";
 
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11',
-            center: [18.3853, 59.4059],
-            zoom: 10
-        });
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11",
+        center: [18.3853, 59.4059],
+        zoom: 10,
+      });
 
-        var marker = new mapboxgl.Marker({
-        color: "#FF0000"
-        })
+      var marker = new mapboxgl.Marker({
+        color: "#FF0000",
+      })
         .setLngLat([18.3853, 59.4059])
         .addTo(map);
     </script>
     <script>
-        function toggleLanguage() {
-            var currentUrl = window.location.href;
+      function toggleLanguage() {
+        var currentUrl = window.location.href;
 
-            if (currentUrl.includes("-en.html")) {
-                window.location.href = currentUrl.replace("-en.html", "-sv.html");
-            } else if (currentUrl.includes("-sv.html")) {
-                window.location.href = currentUrl.replace("-sv.html", "-en.html");
-            }
+        if (currentUrl.includes("-en.html")) {
+          window.location.href = currentUrl.replace("-en.html", "-sv.html");
+        } else if (currentUrl.includes("-sv.html")) {
+          window.location.href = currentUrl.replace("-sv.html", "-en.html");
         }
+      }
     </script>
-</body>
+  </body>
 </html>

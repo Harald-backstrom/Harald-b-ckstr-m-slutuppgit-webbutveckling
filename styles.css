@@ -9,10 +9,7 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
-h1,
-h2 {
-  color: #ffffff;
-}
+
 p {
   margin-bottom: 20px;
 }
@@ -111,7 +108,7 @@ nav ul li a:hover {
 }
 /* Hamburger menu styles */
 #menu-toggle {
-  display: block;
+  display: inline-block;
   cursor: pointer;
 }
 
@@ -132,10 +129,15 @@ nav ul li a:hover {
 @media screen and (max-width: 768px) {
   .normal-menu {
     display: none;
+    vertical-align: middle;
   }
 
   .hamburger-menu {
-    display: block;
+    display: flex;
+  }
+
+  .logo {
+    display: inline-block;
   }
 
   .menu-links {
@@ -155,4 +157,22 @@ nav ul li a:hover {
     display: block;
     transform: translateY(0);
   }
+}
+
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  unicode-bidi: isolate;
+  line-height: normal;
+  font-weight: normal;
+  font-size: medium;
+  font-style: normal;
+  color: -internal-quirk-inherit;
+  text-align: start;
+  border-spacing: 2px;
+  border-color: gray;
+  white-space: normal;
+  font-variant: normal;
 }
