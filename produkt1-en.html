@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mitron Marinteknik</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header> 
-        <nav>
-            <div class="logo">Mitron Marinteknik</div>
-            <ul>
-                <li><a href="index-en.html">Products</a></li>
-                <li><a href="about-en.html">Contact</a></li>
-            </ul>
-        </nav>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="normal-menu">
+        <div class="logo">Mitron Marinteknik</div>
+        <ul>
+          <li><a href="index-en.html">Products</a></li>
+          <li><a href="about-en.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="hamburger-menu">
+        <div class="logo">Mitron Marinteknik</div>
+        <div id="menu-toggle" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul id="menu-links" class="menu-links">
+          <li><a href="index-en.html">Products</a></li>
+          <li><a href="about-en.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <button onclick="toggleLanguage()">Change Language</button>
-    <script>
-        function toggleLanguage() {
-            var currentUrl = window.location.href;
-
-            if (currentUrl.includes("-en.html")) {
-                window.location.href = currentUrl.replace("-en.html", "-sv.html");
-            } else if (currentUrl.includes("-sv.html")) {
-                window.location.href = currentUrl.replace("-sv.html", "-en.html");
-            }
-        }
-    </script>
-</body>
+    <main>
+      <name> </name>
+      <img />
+      <h1></h1>
+      <img />
+      <h1></h1>
+    </main>
+    <script src="javascript.js"></script>
+  </body>
 </html>
