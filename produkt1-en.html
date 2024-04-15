@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitron Marinteknik</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header> 
+        <nav>
+            <div class="logo">Mitron Marinteknik</div>
+            <ul>
+                <li><a href="index-en.html">Products</a></li>
+                <li><a href="about-en.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <button onclick="toggleLanguage()">Change Language</button>
+    <script>
+        function toggleLanguage() {
+            var currentUrl = window.location.href;
+
+            if (currentUrl.includes("-en.html")) {
+                window.location.href = currentUrl.replace("-en.html", "-sv.html");
+            } else if (currentUrl.includes("-sv.html")) {
+                window.location.href = currentUrl.replace("-sv.html", "-en.html");
+            }
+        }
+    </script>
+</body>
+</html>
