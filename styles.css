@@ -4,15 +4,58 @@ body {
   padding: 0;
   line-height: 1.6;
 }
+/* Existing CSS styles remain unchanged */
+
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  text-align: center; /* Center align content */
+}
+
+h1 {
+  margin-top: 0; /* Remove top margin for heading */
+}
+
+ul {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc; /* Add border to table elements */
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+th {
+  background-color: #f2f2f2; /* Add background color to table header */
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Alternate row background color */
+}
+
+tr:hover {
+  background-color: #ddd; /* Hover color for table rows */
 }
 
 p {
   margin-bottom: 20px;
 }
+
 address {
   margin-top: 20px;
   font-style: normal;
@@ -40,6 +83,11 @@ header {
 .product {
   margin: 20px;
   text-align: center;
+  background-color: #f2f2f2; /* Add background color */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  padding: 20px; /* Add padding for spacing */
+  width: 220px; /* Set fixed width */
+  height: 340px; /* Set fixed height */
 }
 
 .product a {
@@ -89,7 +137,7 @@ nav ul li a {
 nav ul li a:hover {
   color: #ffd700;
 }
-/* Logo styling */
+
 .logo {
   font-size: 24px;
   font-weight: bold;
@@ -102,11 +150,9 @@ nav ul li a:hover {
 }
 #map {
   width: 100%;
-  height: calc(
-    50vh - 10px
-  ); /* Roughly half the height of the viewport minus some padding */
+  height: calc(50vh - 10px);
 }
-/* Hamburger menu styles */
+
 #menu-toggle {
   display: inline-block;
   cursor: pointer;
@@ -266,4 +312,14 @@ svg {
   to {
     transform: translateY(20%);
   }
+}
+
+.product img {
+  max-width: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.product:hover img {
+  transform: scale(1.1); /* Enlarge the image on hover */
 }
