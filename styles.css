@@ -165,6 +165,11 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 768px) {
+  .img-responsive {
+    width: 100%;
+    height: auto;
+  }
+
   .normal-menu {
     display: none;
     vertical-align: middle;
