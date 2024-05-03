@@ -3,89 +3,107 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mitron Marinteknik</title>
+    <title>Mitron Marinteknik</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <nav class="normal-menu">
-        <img src="AYA-3tm.gif" />
-        <div class="logo">Mitron Marinteknik</div>
+        <a href="index-sv.html"> <img src="bilder/AYA-3tm.gif" /></a>
+        <a href="index-sv.html"> <div class="logo">Mitron Marinteknik</div></a>
+
         <ul>
-          <li><a href="index-en.html">Products</a></li>
-          <li><a href="about-en.html">Contact</a></li>
+          <li><a href="index-en.html">Produkter</a></li>
+          <li><a href="about-en.html">Kontakt</a></li>
         </ul>
       </nav>
       <nav class="hamburger-menu">
-        <div class="logo">Mitron Marinteknik</div>
+        <a href="index-sv.html"> <div class="logo">Mitron Marinteknik</div></a>
         <div id="menu-toggle" onclick="toggleMenu()">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
         <ul id="menu-links" class="menu-links">
-          <li><a href="index-en.html">Products</a></li>
-          <li><a href="about-en.html">Contact</a></li>
+          <li><a href="index-en.html">Produkter</a></li>
+          <li><a href="about-en.html">Kontakt</a></li>
         </ul>
       </nav>
     </header>
     <button onclick="toggleLanguage()">Byt Språk</button>
     <main>
       <section class="product-list">
-        <!-- Product 1 -->
         <div class="product">
           <a href="produkt1-en.html">
-            <img src="Check1.gif" alt="Product 1" />
-            <h2>Rig spännings mätare</h2>
+            <img src="bilder/Check1.gif" alt="Product 1" />
+            <h2>Rig mätare</h2>
+            <p>pris:</p>
           </a>
         </div>
 
-        <!-- Product 2 -->
         <div class="product">
-          <a href="product2.html">
-            <img src="con4-11a.gif" alt="Product 2" />
+          <a href="produkt2-en.html">
+            <img src="bilder/con4-11a.gif" alt="Product 2" />
             <h2>Batteripolplint</h2>
+            <p>pris:</p>
           </a>
         </div>
 
-        <!-- Product 3 -->
         <div class="product">
-          <a href="product3.html">
-            <img src="handy70.gif" alt="Product 3" />
-            <h2>Batteriladdare</h2>
+          <a href="produkt3-en.html">
+            <img src="bilder/handy70.gif" alt="Product 3" />
+            <h2>12v Batteri laddare</h2>
+            <p>pris:</p>
           </a>
         </div>
 
-        <!-- Product 4 -->
         <div class="product">
-          <a href="product4.html">
-            <img src="Clip-2.gif" alt="Product 4" />
+          <a href="produkt4-en.html">
+            <img src="bilder/Clip-2.gif" alt="Product 4" />
             <h2>Vantskruvlås</h2>
+            <p>pris:</p>
           </a>
         </div>
-        <!-- Product 5 -->
+
         <div class="product">
-          <a href="product5.html">
-            <img src="con5-706.gif" alt="Product 5" />
-            <h2>strömplint</h2>
+          <a href="produkt5-en.html">
+            <img src="bilder/con5-706.gif" alt="Product 5" />
+            <h2>Strömplint</h2>
+            <p>pris:</p>
           </a>
         </div>
-        <!-- Product 6 -->
+
         <div class="product">
-          <a href="product6.html">
-            <img src="Conn3.gif" alt="Product 6" />
+          <a href="produkt6-en.html">
+            <img src="bilder/Conn3.gif" alt="Product 6" />
             <h2>Fördelningsplint</h2>
+            <p>pris:</p>
           </a>
         </div>
-        <!-- Product 8 -->
+
         <div class="product">
-          <a href="product7.html">
-            <img src="Conn1.gif" alt="Product 7" />
-            <h2>Guld plåtad Kontakt</h2>
+          <a href="produkt7-en.html">
+            <img src="bilder/Conn1.gif" alt="Product 7" />
+            <h2>Guldkontakt</h2>
+            <p>pris:</p>
           </a>
         </div>
       </section>
     </main>
+
     <script src="javascript.js"></script>
+    <footer>
+      <svg viewBox="0 0 120 28">
+        <defs>
+          <path
+            id="wave"
+            d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z"
+          />
+        </defs>
+        <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2"></use>
+        <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0"></use>
+        <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+      </svg>
+    </footer>
   </body>
 </html>

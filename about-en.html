@@ -13,15 +13,16 @@
   <body>
     <header>
       <nav class="normal-menu">
-        <img src="AYA-3tm.gif" />
-        <div class="logo">Mitron Marinteknik</div>
+        <a href="index-en.html"> <img src="bilder/AYA-3tm.gif" /></a>
+        <a href="index-en.html"> <div class="logo">Mitron Marinteknik</div></a>
+
         <ul>
           <li><a href="index-en.html">Products</a></li>
           <li><a href="about-en.html">Contact</a></li>
         </ul>
       </nav>
       <nav class="hamburger-menu">
-        <div class="logo">Mitron Marinteknik</div>
+        <a href="index-en.html"> <div class="logo">Mitron Marinteknik</div></a>
         <div id="menu-toggle" onclick="toggleMenu()">
           <div class="bar"></div>
           <div class="bar"></div>
@@ -36,9 +37,8 @@
     <button onclick="toggleLanguage()">Change Language</button>
     <main>
       <article class="container">
-        <h2>Contact Us</h2>
         <p>
-          Mitron Marinteknik AB is located at Båtman Stens väg, 163 41 Spånga,
+          Mitron Marinteknik AB is located at Ytterbyvägen 14A, 185 94 Vaxholm,
           Sweden. We are proud manufacturers of unique marine products.
         </p>
 
@@ -53,8 +53,8 @@
         <p>Our banking information:</p>
         <ul>
           <li>
-            Beneficiary: Mitron Marinteknik AB, Båtman Stens Väg 81, SE 163 41
-            Spånga, Sweden
+            Beneficiary: Mitron Marinteknik AB, Ytterbyvägen 14A, 185 94
+            Vaxholm, Sweden
           </li>
           <li>Banking: SWEDBANK, Box 15, SE38402 Ålem</li>
           <li>BIC/SWIFT: SWEDSESS, Bank sort code: 8434-3</li>
@@ -64,8 +64,6 @@
           <li>IBAN (EUR): SE4480000843432376719783</li>
           <li>VAT No.: SE556863-686301</li>
         </ul>
-
-        <p>Board of Directors: Stockholm</p>
 
         <p>
           Contact: Conny Bäckström - Email:
@@ -77,33 +75,7 @@
       </div>
     </main>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
-    <script>
-      mapboxgl.accessToken =
-        "pk.eyJ1IjoiaGFycmViYXJyZSIsImEiOiJjbHR6d29pOG4wNTRvMmlzM2IwdXd4bnJkIn0.-oZ0a4L3ZQtzFXpoPjmqbA";
-
-      var map = new mapboxgl.Map({
-        container: "map",
-        style: "mapbox://styles/mapbox/streets-v11",
-        center: [18.3853, 59.4059],
-        zoom: 10,
-      });
-
-      var marker = new mapboxgl.Marker({
-        color: "#FF0000",
-      })
-        .setLngLat([18.3853, 59.4059])
-        .addTo(map);
-    </script>
-    <script>
-      function toggleLanguage() {
-        var currentUrl = window.location.href;
-
-        if (currentUrl.includes("-en.html")) {
-          window.location.href = currentUrl.replace("-en.html", "-sv.html");
-        } else if (currentUrl.includes("-sv.html")) {
-          window.location.href = currentUrl.replace("-sv.html", "-en.html");
-        }
-      }
-    </script>
+    <script src="mapbox.js"></script>
+    <script src="javascript.js"></script>
   </body>
 </html>
