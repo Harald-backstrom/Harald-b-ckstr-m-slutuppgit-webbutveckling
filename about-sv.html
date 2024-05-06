@@ -37,11 +37,35 @@
     <button onclick="toggleLanguage()">Byt Språk</button>
     <main>
       <article class="container">
-        <p>
-          Mitron Marinteknik AB ligger vid Ytterbyvägen 14A, 185 94 Vaxholm,
-          Sweden. Vi är stolta tillverkare av unika marina produkter.
-        </p>
-
+        <div class="form-container">
+          <h2>Order Formulär</h2>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Mobil:</label>
+              <input type="text" id="phone" name="phone" />
+            </div>
+            <div class="form-group">
+              <label for="product_number">Produkt Numer:</label>
+              <input
+                type="text"
+                id="product_number"
+                name="product_number"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="amount">Mängd:</label>
+              <input type="number" id="amount" name="amount" required />
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </div>
         <p>Kontakta oss vid:</p>
         <address>
           Tel: +46 8 257880<br />
@@ -49,23 +73,15 @@
           Email: <a href="mailto:info@mitron.se">info@mitron.se</a><br />
           Web: <a href="http://www.mitron.se">www.mitron.se</a>
         </address>
-        <p>Vår bank information:</p>
-        <ul>
-          <li>
-            Förmånstagare: Mitron Marinteknik AB, Ytterbyvägen 14A, 185 94
-            Vaxholm, Sweden
-          </li>
-          <li>Bankverksamhet: SWEDBANK, Box 15, SE38402 Ålem</li>
-          <li>BIC/SWIFT: SWEDSESS, Bank sort code: 8434-3</li>
-          <li>Bankkonto Num. (SEK): 34527309 (Payment in SEK)</li>
-          <li>Bankkonto Num. (EUR): 2376719783 (Payment in EUR)</li>
-          <li>IBAN (SEK): SE8880000843430034527309</li>
-          <li>IBAN (EUR): SE4480000843432376719783</li>
-          <li>Moms Num: SE556863-686301</li>
-        </ul>
+
         <p>
-          Kontakt: Conny Bäckström - Email:
+          Contact: Conny Bäckström - Email:
           <a href="mailto:cb@mitron.se">cb@mitron.se</a>
+        </p>
+
+        <p>
+          Mitron Marinteknik AB finns vid Ytterbyvägen 14A, 185 94 Vaxholm,
+          sverige.Vi är stolta tillverkare av unika marina produkter.
         </p>
       </article>
       <div id="map-container">
