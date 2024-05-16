@@ -333,6 +333,7 @@ input[type="submit"]:hover {
 
 .order-container {
   margin-bottom: 20px;
+  position: relative;
 }
 
 .order-container label {
@@ -344,6 +345,26 @@ input[type="submit"]:hover {
 .order-container input {
   width: 50%;
   display: inline-block;
+}
+
+.remove-order {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.remove-order:hover {
+  background-color: #d43f3f;
 }
 
 #addOrder {

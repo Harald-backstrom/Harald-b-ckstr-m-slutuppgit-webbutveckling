@@ -45,7 +45,7 @@ document.getElementById("addOrder").addEventListener("click", function () {
 
   var orderNumberLabel = document.createElement("label");
   orderNumberLabel.setAttribute("for", "orderNumber");
-  orderNumberLabel.textContent = "Article Number:";
+  orderNumberLabel.textContent = "Artikelnummer:";
 
   var orderNumberInput = document.createElement("input");
   orderNumberInput.setAttribute("type", "text");
@@ -54,8 +54,7 @@ document.getElementById("addOrder").addEventListener("click", function () {
 
   var orderAmountLabel = document.createElement("label");
   orderAmountLabel.setAttribute("for", "orderAmount");
-  orderAmountLabel.textContent = "Article Amount:";
-
+  orderAmountLabel.textContent = "Artikel mängd:";
   var orderAmountInput = document.createElement("input");
   orderAmountInput.setAttribute("type", "number");
   orderAmountInput.setAttribute("name", "orderAmount[]");
@@ -63,7 +62,7 @@ document.getElementById("addOrder").addEventListener("click", function () {
 
   var removeButton = document.createElement("button");
   removeButton.classList.add("remove-order");
-  removeButton.textContent = "Remove";
+  removeButton.textContent = "Ta bort";
   removeButton.addEventListener("click", function () {
     div.remove();
   });

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Om Oss - Mitron Marinteknik</title>
+    <title>Om oss - Mitron Marinteknik</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
@@ -17,16 +17,16 @@
   <body>
     <header>
       <nav class="normal-menu">
-        <a href="index-sv.html"> <img src="bilder/AYA-3tm.gif" /></a>
-        <a href="index-sv.html"> <div class="logo">Mitron Marinteknik</div></a>
+        <a href="index-en.html"> <img src="bilder/AYA-3tm.gif" /></a>
+        <a href="index-en.html"> <div class="logo">Mitron Marinteknik</div></a>
 
         <ul>
-          <li><a href="index-sv.html">Produkter</a></li>
-          <li><a href="about-sv.html">Kontakt</a></li>
+          <li><a href="index-en.html">Produkter</a></li>
+          <li><a href="about-en.html">Kontakt</a></li>
         </ul>
       </nav>
       <nav class="hamburger-menu">
-        <a href="index-sv.html"> <div class="logo">Mitron Marinteknik</div></a>
+        <a href="index-en.html"> <div class="logo">Mitron Marinteknik</div></a>
         <div id="menu-toggle" onclick="toggleMenu()">
           <div class="bar"></div>
           <div class="bar"></div>
@@ -38,39 +38,46 @@
         </ul>
       </nav>
     </header>
-    <button onclick="toggleLanguage()">Byt Språk</button>
+    <button onclick="toggleLanguage()">Byt språk</button>
     <main>
-      <article class="container">
-        <div class="form-container">
-          <h2>Order Formulär</h2>
-          <form action="#" method="post">
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Mobil:</label>
-              <input type="text" id="phone" name="phone" />
-            </div>
-            <div class="form-group">
-              <label for="product_number">Produkt Numer:</label>
-              <input
-                type="text"
-                id="product_number"
-                name="product_number"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="amount">Mängd:</label>
-              <input type="number" id="amount" name="amount" required />
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Submit" />
-            </div>
-          </form>
-        </div>
-        <p>Kontakta oss vid:</p>
+      <div class="container">
+        <h2>Beställningsformulär:</h2>
+        <form id="orderForm">
+          <div class="order-container">
+            <label for="name" id="name-label">Namn:</label>
+            <input type="text" id="name" name="name" required /><br />
+
+            <label for="email" id="email-label">E-post:</label>
+            <input type="email" id="email" name="email" required /><br />
+
+            <label for="phone" id="phone-label">Telefon:</label>
+            <input type="tel" id="phone" name="phone" required /><br />
+
+            <label for="address" id="address-label">Adress:</label>
+            <input type="text" id="address" name="address" required /><br />
+
+            <label for="orderNumber" id="order-number-label"
+              >Artikelnummer:</label
+            >
+            <input type="text" id="orderNumber" name="orderNumber[]" required />
+
+            <label for="orderAmount" id="order-amount-label"
+              >Artikel mängd:</label
+            >
+            <input
+              type="number"
+              id="orderAmount"
+              name="orderAmount[]"
+              required
+            /><br />
+          </div>
+
+          <button type="button" id="addOrder">Lägg till beställning</button>
+          <br /><br />
+
+          <input type="submit" value="Skicka" id="submit-button" />
+        </form>
+        <p>Kontakta oss på:</p>
         <address>
           Tel: +46 8 257880<br />
           Fax: +46 8 808300<br />
@@ -79,17 +86,17 @@
         </address>
 
         <p>
-          Contact: Conny Bäckström - Email:
+          Kontakt: Conny Bäckström - Email:
           <a href="mailto:cb@mitron.se">cb@mitron.se</a>
         </p>
 
         <p>
-          Mitron Marinteknik AB finns vid Ytterbyvägen 14A, 185 94 Vaxholm,
-          sverige.Vi är stolta tillverkare av unika marina produkter.
+          Mitron Marinteknik AB är beläget på Ytterbyvägen 14A, 185 94 Vaxholm,
+          Sverige. Vi är stolta tillverkare av unika marinprodukter.
         </p>
-      </article>
-      <div id="map-container">
-        <div id="map"></div>
+        <div id="map-container">
+          <div id="map"></div>
+        </div>
       </div>
     </main>
     <footer>
@@ -106,6 +113,6 @@
       </svg>
     </footer>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
-    <script src="javascript.js"></script>
+    <script src="javascript-sv.js"></script>
   </body>
 </html>

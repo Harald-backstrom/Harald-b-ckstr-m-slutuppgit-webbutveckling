@@ -41,42 +41,41 @@
     <button onclick="toggleLanguage()">Change Language</button>
     <main>
       <div class="container">
-        <h2>Order Form</h2>
+        <h2>Order Form:</h2>
         <form id="orderForm">
           <div class="order-container">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required /><br /><br />
+            <label for="name" id="name-label">Name:</label>
+            <input type="text" id="name" name="name" required /><br />
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required /><br /><br />
+            <label for="email" id="email-label">Email:</label>
+            <input type="email" id="email" name="email" required /><br />
 
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required /><br /><br />
+            <label for="phone" id="phone-label">Phone:</label>
+            <input type="tel" id="phone" name="phone" required /><br />
 
-            <label for="address">Address:</label>
-            <input
-              type="text"
-              id="address"
-              name="address"
-              required
-            /><br /><br />
+            <label for="address" id="address-label">Address:</label>
+            <input type="text" id="address" name="address" required /><br />
 
-            <label for="orderNumber">Order Number:</label>
+            <label for="orderNumber" id="order-number-label"
+              >Article Number:</label
+            >
             <input type="text" id="orderNumber" name="orderNumber[]" required />
 
-            <label for="orderAmount">Order Amount:</label>
+            <label for="orderAmount" id="order-amount-label"
+              >Article Amount:</label
+            >
             <input
               type="number"
               id="orderAmount"
               name="orderAmount[]"
               required
-            /><br /><br />
+            /><br />
           </div>
 
           <button type="button" id="addOrder">Add Order</button>
           <br /><br />
 
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" id="submit-button" />
         </form>
         <p>Contact us at:</p>
         <address>
@@ -113,41 +112,6 @@
         <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
       </svg>
     </footer>
-    <script>
-      document
-        .getElementById("addOrder")
-        .addEventListener("click", function () {
-          var container = document.getElementById("orderForm");
-
-          var div = document.createElement("div");
-          div.classList.add("order-container");
-
-          var orderNumberLabel = document.createElement("label");
-          orderNumberLabel.setAttribute("for", "orderNumber");
-          orderNumberLabel.textContent = "Order Number:";
-
-          var orderNumberInput = document.createElement("input");
-          orderNumberInput.setAttribute("type", "text");
-          orderNumberInput.setAttribute("name", "orderNumber[]");
-          orderNumberInput.required = true;
-
-          var orderAmountLabel = document.createElement("label");
-          orderAmountLabel.setAttribute("for", "orderAmount");
-          orderAmountLabel.textContent = "Order Amount:";
-
-          var orderAmountInput = document.createElement("input");
-          orderAmountInput.setAttribute("type", "number");
-          orderAmountInput.setAttribute("name", "orderAmount[]");
-          orderAmountInput.required = true;
-
-          div.appendChild(orderNumberLabel);
-          div.appendChild(orderNumberInput);
-          div.appendChild(orderAmountLabel);
-          div.appendChild(orderAmountInput);
-
-          container.insertBefore(div, document.getElementById("addOrder"));
-        });
-    </script>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
     <script src="javascript.js"></script>
   </body>
