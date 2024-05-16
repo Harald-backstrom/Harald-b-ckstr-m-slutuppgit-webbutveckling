@@ -9,6 +9,10 @@
       href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -36,36 +40,44 @@
     </header>
     <button onclick="toggleLanguage()">Change Language</button>
     <main>
-      <article class="container">
-        <div class="form-container">
-          <h2>Order Form</h2>
-          <form action="#" method="post">
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone:</label>
-              <input type="text" id="phone" name="phone" />
-            </div>
-            <div class="form-group">
-              <label for="product_number">Product Number:</label>
-              <input
-                type="text"
-                id="product_number"
-                name="product_number"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="amount">Amount:</label>
-              <input type="number" id="amount" name="amount" required />
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Submit" />
-            </div>
-          </form>
-        </div>
+      <div class="container">
+        <h2>Order Form</h2>
+        <form id="orderForm">
+          <div class="order-container">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required /><br /><br />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required /><br /><br />
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required /><br /><br />
+
+            <label for="address">Address:</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              required
+            /><br /><br />
+
+            <label for="orderNumber">Order Number:</label>
+            <input type="text" id="orderNumber" name="orderNumber[]" required />
+
+            <label for="orderAmount">Order Amount:</label>
+            <input
+              type="number"
+              id="orderAmount"
+              name="orderAmount[]"
+              required
+            /><br /><br />
+          </div>
+
+          <button type="button" id="addOrder">Add Order</button>
+          <br /><br />
+
+          <input type="submit" value="Submit" />
+        </form>
         <p>Contact us at:</p>
         <address>
           Tel: +46 8 257880<br />
@@ -83,9 +95,9 @@
           Mitron Marinteknik AB is located at Ytterbyvägen 14A, 185 94 Vaxholm,
           Sweden. We are proud manufacturers of unique marine products.
         </p>
-      </article>
-      <div id="map-container">
-        <div id="map"></div>
+        <div id="map-container">
+          <div id="map"></div>
+        </div>
       </div>
     </main>
     <footer>
@@ -101,6 +113,41 @@
         <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
       </svg>
     </footer>
+    <script>
+      document
+        .getElementById("addOrder")
+        .addEventListener("click", function () {
+          var container = document.getElementById("orderForm");
+
+          var div = document.createElement("div");
+          div.classList.add("order-container");
+
+          var orderNumberLabel = document.createElement("label");
+          orderNumberLabel.setAttribute("for", "orderNumber");
+          orderNumberLabel.textContent = "Order Number:";
+
+          var orderNumberInput = document.createElement("input");
+          orderNumberInput.setAttribute("type", "text");
+          orderNumberInput.setAttribute("name", "orderNumber[]");
+          orderNumberInput.required = true;
+
+          var orderAmountLabel = document.createElement("label");
+          orderAmountLabel.setAttribute("for", "orderAmount");
+          orderAmountLabel.textContent = "Order Amount:";
+
+          var orderAmountInput = document.createElement("input");
+          orderAmountInput.setAttribute("type", "number");
+          orderAmountInput.setAttribute("name", "orderAmount[]");
+          orderAmountInput.required = true;
+
+          div.appendChild(orderNumberLabel);
+          div.appendChild(orderNumberInput);
+          div.appendChild(orderAmountLabel);
+          div.appendChild(orderAmountInput);
+
+          container.insertBefore(div, document.getElementById("addOrder"));
+        });
+    </script>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
     <script src="javascript.js"></script>
   </body>
